@@ -1,0 +1,22 @@
+{
+    "name": "masterix21/laravel-html2pdf",
+    "description": "Laravel package for html2pdf.fr",
+    "keywords": ["html2pdf", "pdf", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "spipu/html2pdf": "^4.6",
+        "laravel/framework": "5.*"
+    },
+    "authors": [
+        {
+            "name": "Luca Longo",
+            "email": "l.longo@ambita.it"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "masterix21\\html2pdf\\": "src/"
+        }
+    }
+}
