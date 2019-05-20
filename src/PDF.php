@@ -3,6 +3,8 @@
 namespace masterix21\html2pdf;
 
 use Illuminate\Contracts\View\Factory as ViewFactory;
+use Illuminate\Support\Arr;
+use Spipu\Html2Pdf\Html2Pdf;
 
 class PDF
 {
@@ -24,13 +26,13 @@ class PDF
         if (empty($config) || !is_array($config))
             $config = [];
 
-        $html2pdf = new \HTML2PDF(
-            array_get($config, 'orientation', config('html2pdf.orientation')),
-            array_get($config, 'format', config('html2pdf.format')),
+        $html2pdf = new Html2Pdf(
+            Arr::get($config, 'orientation', config('html2pdf.orientation')),
+            Arr::get($config, 'format', config('html2pdf.format')),
             config('app.locale'),
-            array_get($config, 'unicode', config('html2pdf.unicode')),
-            array_get($config, 'encoding', config('html2pdf.encoding')),
-            array_get($config, 'margins', config('html2pdf.margins'))
+            Arr::get($config, 'unicode', config('html2pdf.unicode')),
+            Arr::get($config, 'encoding', config('html2pdf.encoding')),
+            Arr::get($config, 'margins', config('html2pdf.margins'))
         );
 
         return $html2pdf;
