@@ -1,6 +1,6 @@
 {
     "name": "masterix21/laravel-html2pdf",
-    "version": "1.0",
+    "version": "1.0.2",
     "description": "Laravel package for html2pdf.fr",
     "keywords": ["html2pdf", "pdf", "laravel"],
     "license": "MIT",
